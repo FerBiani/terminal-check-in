@@ -17,6 +17,90 @@
   color: white;
 }
 
+.form-box {
+  padding: 100px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1.5px solid #fff;
+  border-radius: 10px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 18;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.input-text {
+  padding: 10px;
+  font-size: 2em;
+  background-color: #d2d2d2;
+  border-radius: 10px;
+}
+
+.input-text:focus {
+  outline: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.button-area {
+  margin: 20px 0;
+}
+
+.success-button {
+  padding: 20px 50px;
+  border-radius: 10px;
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.success-button:focus {
+  outline: none;
+}
+
+.title {
+  color: #000;
+  margin: 10px 0;
+}
+
 .App-link {
   color: #09d3ac;
+}
+
+.message {
+  width: 100%;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  padding: 20px 0;
+  position: absolute;
+  top: 0;
+  margin: 0;
+}
+
+.close-message {
+  position: 'absolute';
+  top: 5px;
+  right: 5px;
+}
+
+.loading-image {
+  position: absolute;
+  padding: 100px;
+  background-color: #fff
 }
