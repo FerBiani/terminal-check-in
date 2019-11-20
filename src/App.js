@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './App.css'
 import axios from 'axios'
+// import io from 'socket.io-client'
 
 class App extends Component {
 
@@ -11,6 +12,7 @@ class App extends Component {
       messageColor: '',
       codigo: '',
       loading: false,
+      socket: null
     }
   }
 
@@ -42,21 +44,25 @@ class App extends Component {
         } 
       })
 
+      console.log(request.data)
+
       this.setState({
         codigo: '',
-        message: request.data,
+        message: request.data.message,
         messageColor: '#28a745',
         loading:false
       })
 
     } catch(err) {
 
-      this.setState({
-        codigo: '',
-        message: err.response.data,
-        messageColor: 'red',
-        loading:false
-      })
+      if(err.response.data.message) {
+        this.setState({
+          codigo: '',
+          message: err.response.data.message,
+          messageColor: 'red',
+          loading:false
+        })
+      }
 
     }
 
